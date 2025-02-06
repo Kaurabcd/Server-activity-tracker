@@ -1,12 +1,35 @@
-<div>
-    @if (currentStatus === 'online') {
+<!-- <div id="status"> -->
+    <!-- class binding div -->
+    <!-- <div [class.status]="currentStatus=='online'" [style.font-size]="'64px'">               
+    <div [class]="{ 
+        status:true, 
+        'status-online':currentStatus== 'online', 
+        'status-offline': currentStatus=='offline'
+        }"
+
+     [style]="{
+            // 'font-size': '64px',
+            // fontSize: '64px',
+
+        }"
+        >                -->
+    <div [class.status]="currentStatus()=='online'" >               
+    <div [class]="{ 
+        status:true, 
+        'status-online':currentStatus()== 'online', 
+        'status-offline': currentStatus()=='offline'
+        }"
+
+        >               
+    @if (currentStatus() === 'online') {
     <p>Servers are online</p>
     <p>All systems are operational.</p>
-    } @else if (currentStatus === 'offline') {
+    } @else if (currentStatus() === 'offline') {
     <p>Servers are offline</p>
     <p>Functionality should be restored soon.</p>
     } @else {
     <p>Server status is unknown</p>
     <p>Fetching server status failed.</p>
     }
-</div>
+    </div>
+<!-- </div> -->

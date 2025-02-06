@@ -1,0 +1,63 @@
+<!-- <form>
+    <p>
+      <label>Title</label>
+      <input name="title" id="title" />
+    </p>
+    <p>
+      <label>Request</label>
+      <textarea name="request" id="request" rows="3"></textarea>
+    </p>
+    <p>
+      <button appButton>
+        Submit-->
+        <!-- <span>Submit</span> -->
+        <!-- <span ngProjectAs="icon">
+          ⌲
+        </span>
+      </button>
+    </p>
+  </form>  -->
+
+<!-- <form (ngSubmit)="onSubmit(titleInput)"> -->
+<!-- <form (ngSubmit)="onSubmit(titleInput.value,titlerequest.value,form) #form"> -->
+<!-- <form (ngSubmit)="onSubmit(titleInput.value,titlerequest.value)" #form>
+  <app-control class="control" label="Title" #ctrl > -->
+    <!-- <span ngProjectAs="input"></span> -->
+    <!-- <input name="title" id="title" #titleInput #input/>
+  </app-control> -->
+  <!-- <app-control class="control" label="Request"> -->
+  <!-- <app-control label="Request">
+    <textarea name="request" id="request" rows="3" #titlerequest #input></textarea>
+  </app-control>
+
+    <p>
+      <button appButton>
+        Submit -->
+        <!-- <span>Submit</span> -->
+        <!-- <span ngProjectAs="icon">
+          >>
+        </span>
+      </button>
+    </p>
+  </form>
+   -->
+   <form (ngSubmit)="onSubmit()" >
+    <app-control class="control" label="Title"  >
+      <!-- <span ngProjectAs="input"></span> -->
+      <input name="title" id="title" [(ngModel)]="enteredTitle"/>
+    </app-control>
+    <!-- <app-control class="control" label="Request"> -->
+    <app-control label="Request">
+      <textarea name="request" id="request" rows="3" [(ngModel)]="enteredRequest"></textarea>
+    </app-control>
+  
+      <p>
+        <button appButton>
+          Submit
+          <!-- <span>Submit</span> -->
+          <span ngProjectAs="icon">
+            >>
+          </span>
+        </button>
+      </p>
+    </form>

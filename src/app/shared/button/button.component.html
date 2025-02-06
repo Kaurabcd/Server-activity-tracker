@@ -1,0 +1,13 @@
+    <span>
+      <ng-content/>
+    </span>
+    <span class="icon">
+      <!-- content projection with class selector -->
+      <!-- <ng-content select=".icon"></ng-content> -->
+       
+      <!-- content projection fallback and selector which will defined in ngProjectAs -->
+      <ng-content select="icon">##</ng-content>        
+    </span>
+
+    <!-- <span>Logout</span>
+    <span class="icon">-></span> -->
